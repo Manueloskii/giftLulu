@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Changa+One:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Pin Code Screen -->
+    <div id="pin-screen" class="pin-screen">
+        <div class="pin-container">
+            <h1 class="pin-title">Enter Access Code</h1>
+            <p class="pin-subtitle">Only those who know the secret can enter</p>
+            <div class="pin-input-container">
+                <input type="password" id="pin-input" class="pin-input" placeholder="Enter pin" maxlength="2">
+                <button id="pin-submit" class="pin-submit">Enter</button>
+            </div>
+            <div id="pin-error" class="pin-error hidden">Incorrect code. Try again.</div>
+        </div>
+        <div class="pin-background">
+            <div class="floating-heart">💖</div>
+            <div class="floating-heart">💕</div>
+            <div class="floating-heart">💗</div>
+            <div class="floating-heart">💝</div>
+            <div class="floating-heart">💖</div>
+        </div>
+    </div>
+
+    <!-- Introduction Screen -->
+    <div id="intro-screen" class="intro-screen hidden">
+        <div class="intro-content">
+            <h1 class="intro-text">Bem-vinda de volta, minha coelhinha.</h1>
+        </div>
+        <div class="intro-background">
+            <div class="floating-heart">💖</div>
+            <div class="floating-heart">💕</div>
+            <div class="floating-heart">💗</div>
+            <div class="floating-heart">💝</div>
+            <div class="floating-heart">💖</div>
+        </div>
+    </div>
+
+    <!-- Main Website Content -->
+    <div id="main-content" class="main-content hidden">
+        <div class="container">
+            <div class="cup-section">
+                <div class="cup-content">
+                    <img src="./media/Cup_still.png" alt="Cup" class="cup-image" id="cup-image" onerror="console.log('Image failed to load')">
+                    <p class="cup-text" id="cup-text">Drink some tea from your cup babe</p>
+                    <div class="button-section hidden" id="button-section">
+                        <button class="sim-button" id="sim-button">sim</button>
+                        <p class="playful-text">YOU HAVE NO OTHER OPTION. HEHE!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

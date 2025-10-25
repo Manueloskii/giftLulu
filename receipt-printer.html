@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Printer</title>
+    <link rel="stylesheet" href="receipt-printer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Changa+One:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="receipt-printer-container">
+        <!-- Receipt Printer Image -->
+        <div class="receipt-printer-large">
+            <img src="./media/receipt_printer.png" alt="Receipt Printer" class="receipt-printer-image">
+            
+            <!-- Receipt Image -->
+            <div class="receipt-container">
+                <img src="./media/ReceiptLuiza.jpg" alt="Receipt Luiza" class="receipt-image">
+            </div>
+            
+            <img src="./media/receipt_printer_front.png" alt="Receipt Printer Front" class="receipt-printer-front">
+        </div>
+
+            <!-- Back Button -->
+            <button class="back-button" onclick="window.location.href='arquivo.html'">
+                ← Back to Archive
+            </button>
+            
+            <!-- Download Button -->
+            <button class="download-button" onclick="downloadReceipt()">
+                I want to see it better papi
+            </button>
+    </div>
+
+    <script src="receipt-printer.js"></script>
+</body>
+</html>

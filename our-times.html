@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Times</title>
+    <link rel="stylesheet" href="our-times.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500;600&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="our-times-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">Our Times</h1>
+            <p class="subtitle">Two clocks, one story.</p>
+        </header>
+
+        <!-- Time Cards -->
+        <div class="time-cards">
+            <div class="time-card riverside">
+                <div class="city-info">
+                    <h2 class="city-name">Riverside, CA</h2>
+                    <span class="flag">🇺🇸</span>
+                </div>
+                <div class="time-display">
+                    <div class="time" id="riverside-time">--:--</div>
+                    <div class="date" id="riverside-date">-- --- ----</div>
+                    <div class="timezone">Pacific Time (PT)</div>
+                </div>
+            </div>
+
+            <div class="time-card itabira">
+                <div class="city-info">
+                    <h2 class="city-name">Itabira, MG</h2>
+                    <span class="flag">🇧🇷</span>
+                </div>
+                <div class="time-display">
+                    <div class="time" id="itabira-time">--:--</div>
+                    <div class="date" id="itabira-date">-- --- ----</div>
+                    <div class="timezone">Brasília Time (BRT)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlap Section -->
+        <div class="overlap-section">
+            <h3 class="overlap-title">Where our clocks meet</h3>
+            <div class="overlap-time" id="overlap-time">
+                <span class="overlap-text">Calculating overlap...</span>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="decorative-heart">💕</div>
+        <div class="sparkle sparkle-1">✨</div>
+        <div class="sparkle sparkle-2">✨</div>
+        <div class="sparkle sparkle-3">✨</div>
+
+        <!-- Back Button -->
+        <button class="back-button" onclick="window.location.href='arquivo.html'">
+            ← Back to Archive
+        </button>
+    </div>
+
+    <script src="our-times.js"></script>
+</body>
+</html>

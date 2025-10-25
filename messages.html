@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages to Open When...</title>
+    <link rel="stylesheet" href="messages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="messages-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">Messages to Open When...</h1>
+            <p class="subtitle">For every feeling, there's a letter waiting.</p>
+        </header>
+
+        <!-- Envelopes Grid -->
+        <div class="envelopes-grid">
+            <div class="envelope" data-message="miss">
+                <div class="envelope-body">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-content">
+                        <div class="envelope-label">
+                            <span class="envelope-emoji">💭</span>
+                            <span class="envelope-title">When you miss me</span>
+                        </div>
+                        <div class="letter-peek">
+                            <p>When you miss me</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="envelope" data-message="sad">
+                <div class="envelope-body">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-content">
+                        <div class="envelope-label">
+                            <span class="envelope-emoji">💧</span>
+                            <span class="envelope-title">When you're sad</span>
+                        </div>
+                        <div class="letter-peek">
+                            <p>When you're sad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="envelope" data-message="sleep">
+                <div class="envelope-body">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-content">
+                        <div class="envelope-label">
+                            <span class="envelope-emoji">🌙</span>
+                            <span class="envelope-title">When you can't sleep</span>
+                        </div>
+                        <div class="letter-peek">
+                            <p>When you can't sleep</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="envelope" data-message="proud">
+                <div class="envelope-body">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-content">
+                        <div class="envelope-label">
+                            <span class="envelope-emoji">🌸</span>
+                            <span class="envelope-title">When you're proud of yourself</span>
+                        </div>
+                        <div class="letter-peek">
+                            <p>When you're proud of yourself</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="envelope" data-message="motivation">
+                <div class="envelope-body">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-content">
+                        <div class="envelope-label">
+                            <span class="envelope-emoji">💪</span>
+                            <span class="envelope-title">When you need motivation</span>
+                        </div>
+                        <div class="letter-peek">
+                            <p>When you need motivation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="envelope" data-message="smile">
+                <div class="envelope-body">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-content">
+                        <div class="envelope-label">
+                            <span class="envelope-emoji">☀️</span>
+                            <span class="envelope-title">When you just want to smile</span>
+                        </div>
+                        <div class="letter-peek">
+                            <p>When you just want to smile</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message Modal -->
+        <div class="message-modal" id="message-modal">
+            <div class="message-content">
+                <button class="close-button" id="close-button">×</button>
+                <div class="letter-content" id="letter-content">
+                    <!-- Letter content will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="floating-heart heart-1">💕</div>
+        <div class="floating-heart heart-2">💖</div>
+        <div class="floating-heart heart-3">💗</div>
+
+        <!-- Back Button -->
+        <button class="back-button" onclick="window.location.href='arquivo.html'">
+            ← Back to Archive
+        </button>
+    </div>
+
+    <script src="messages.js"></script>
+</body>
+</html>

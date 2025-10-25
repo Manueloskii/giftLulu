@@ -1,0 +1,230 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffeef8 0%, #f8e8ff 50%, #e8f4ff 100%);
+    min-height: 100vh;
+    color: #333;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.receipt-printer-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Receipt Printer Large */
+.receipt-printer-large {
+    position: relative;
+    width: 95vw;
+    height: 71.25vw; /* Use vw for both to maintain aspect ratio */
+    max-width: 1900px;
+    max-height: 1425px;
+    min-width: 950px;
+    min-height: 712.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInScale 1s ease-out;
+}
+
+.receipt-printer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
+
+/* Back Button */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #6B46C1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(107, 70, 193, 0.2);
+}
+
+/* Download Button */
+.download-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(253, 144, 189, 0.9);
+    border: 1px solid rgba(253, 144, 189, 0.3);
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.download-button:hover {
+    background: rgba(253, 144, 189, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(253, 144, 189, 0.3);
+}
+
+/* Second Receipt Printer Image */
+.receipt-printer-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    animation: fadeInAfterDelay 0.5s ease-out 1.5s forwards;
+    z-index: 3;
+}
+
+/* Receipt Container and Image Containers */
+.receipt-container {
+    position: absolute;
+    top: 30%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    width: 22.27vw;
+    height: 29.69vw; /* Use vw for both to maintain aspect ratio */
+    max-width: 356.25px;
+    max-height: 475px;
+    min-width: 178.125px;
+    min-height: 237.5px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.receipt-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+    opacity: 0;
+    animation: fadeInReceipt 0.5s ease-out 2.5s forwards;
+}
+
+/* Animations */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInAfterDelay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInReceipt {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .receipt-printer-large {
+        width: 100vw;
+        height: 75vw; /* Maintain 4:3 aspect ratio */
+    }
+    
+    .receipt-container {
+        width: 23.75vw;
+        height: 31.67vw; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 768px) {
+    .receipt-printer-large {
+        width: 100vw;
+        height: 75vw; /* Maintain 4:3 aspect ratio */
+        min-width: 712.5px;
+        min-height: 534.375px;
+    }
+    
+    .receipt-container {
+        width: 26.67vw;
+        height: 35.56vw; /* Maintain aspect ratio */
+        min-width: 213.75px;
+        min-height: 285px;
+    }
+    
+    .back-button {
+        top: 15px;
+        left: 15px;
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .receipt-printer-large {
+        width: 100vw;
+        height: 75vw; /* Maintain 4:3 aspect ratio */
+        min-width: 475px;
+        min-height: 356.25px;
+    }
+    
+    .receipt-container {
+        width: 30vw;
+        height: 40vw; /* Maintain aspect ratio */
+        min-width: 142.5px;
+        min-height: 190px;
+    }
+}
+
+@media (max-height: 600px) {
+    .receipt-printer-large {
+        width: 80vh;
+        height: 60vh; /* Use vh when height is constrained */
+    }
+    
+    .receipt-container {
+        width: 20vh;
+        height: 26.67vh; /* Maintain aspect ratio with vh */
+    }
+}
